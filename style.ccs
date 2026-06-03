@@ -1,0 +1,169 @@
+:root {
+    --crema: #fff9f5;
+    --pastel: #ffdecc;
+    --detalles: #d4a373;
+    --texto: #4a4a4a;
+    --blanco: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--crema);
+    color: var(--texto);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.5rem 5%;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+}
+.logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: bold; }
+.logo span { color: var(--detalles); }
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--texto); font-weight: 500; }
+
+/* Hero */
+.hero {
+    position: relative; height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; color: var(--blanco);
+}
+.hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.hero::after { content: ''; position: absolute; width: 100%; height: 100%; background: rgba(0,0,0,0.3); z-index: 0; }
+.hero-content { position: relative; z-index: 1; }
+.hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; }
+.btn-main {
+    display: inline-block; margin-top: 2rem; padding: 1rem 3rem;
+    background: var(--blanco); color: var(--detalles);
+    text-decoration: none; border-radius: 50px; font-weight: bold;
+}
+
+/* Lógica de Tarjetas (Efecto Flip) */
+.container { padding: 5rem 10%; text-align: center; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; }
+
+.card-box {
+    perspective: 1000px;
+    height: 480px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* ACCIÓN: Al pulsar el botón (active) y mantener el hover */
+.card-box:active .card-inner,
+.card-box:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Evita que se de vuelta inmediatamente si solo pasas el mouse por error */
+.card-box:hover .card-inner {
+    transition-delay: 0.1s; 
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Soporte Safari/GitHub */
+    backface-visibility: hidden;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Cara Frontal */
+.card-front {
+    background: var(--blanco);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-front img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card-front h3 { margin-top: 20px; font-family: 'Playfair Display', serif; }
+
+.btn-trigger {
+    margin-top: auto;
+    padding: 12px;
+    background: var(--pastel);
+    color: var(--detalles);
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Cara Trasera (Detalles) */
+.card-back {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.back-text {
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.2); /* Refuerza el oscurecimiento */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.back-text h3 { 
+    font-family: 'Playfair Display', serif; 
+    margin-bottom: 15px; 
+    border-bottom: 1px solid var(--pastel);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.back-text ul {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.back-text li { margin-bottom: 10px; font-size: 1rem; }
+
+.price { font-size: 1.8rem; font-weight: bold; color: var(--pastel); }
+
+/* WhatsApp Float */
+.wpp-float {
+    position: fixed; bottom: 30px; right: 30px;
+    width: 60px; height: 60px;
+    background: #25d366; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center;
+    z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.wpp-float img { width: 35px; }
+
+/* Footer */
+footer { background: var(--blanco); padding: 4rem 10%; text-align: center; }
+.frase-personal { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.4rem; color: var(--detalles); }
+.sep { height: 1px; background: #eee; width: 100px; margin: 2rem auto; }
