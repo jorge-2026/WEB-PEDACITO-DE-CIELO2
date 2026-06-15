@@ -3,14 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PEDACITO-DE-CIELO | Boutique Infantil</title>
+    <title>PEDACITO DE CIELO</title>
+    <!-- Nota: Si tus estilos no cargan, verifica si tu archivo termina en .css o .ccs -->
     <link rel="stylesheet" href="style.ccs">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ESTILOS PARA EL FONDO DIVERTIDO Y CLARO (MUNDO BEBÉ/TELAS) */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f9fc; /* Un fondo base pastel suave */
+            /* Patrón de nubes tiernas y claras en SVG */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M10 25c0-3.3 2.7-6 6-6 1 0 1.9.2 2.7.7C19.7 16.5 22.6 14 26 14c4.4 0 8 3.6 8 8 0 .3 0 .7-.1 1 .9-.6 2-.1 3 .3 2.1 1.2 3.1 3.5 3.1 5.7 0 3.9-3.1 7-7 7H16c-3.3 0-6-2.7-6-6zm40 25c0-2.2 1.8-4 4-4 .7 0 1.3.2 1.8.5.7-2.2 2.7-3.5 5-3.5 3 0 5.4 2.4 5.4 5.3 0 .2 0 .4-.1.6.6-.4 1.3-.1 2 .2 1.4.8 2.1 2.3 2.1 3.8 0 2.6-2.1 4.6-4.6 4.6H54c-2.2 0-4-1.8-4-4z' fill='%23bfe3f1' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Estilo rápido para los botones de WhatsApp */
+        .btn-wpp {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .btn-wpp a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
+    <header>
+        <h1>PEDACITO DE CIELO<img src="logo pedacito.webp" alt="">
+        <h2>Accesorios y Mucho Más</h2>
+    </header>
+
     <nav class="navbar">
-        <div class="logo">PEDACITO-<span>DE-CIELO</span></div>
         <ul class="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#coleccion">Colección</a></li>
@@ -18,79 +57,144 @@
         </ul>
     </nav>
 
+    <section class="container">
+        <h3>SECCIÓN BEBÉS</h3>
+        
+        <!-- Nido 1 -->
+        <div class="card-box">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Nido de contención "Línea Cielo"</h3>
+                    <img src="nido 2 verde.webp" alt="Nido Verde" style="max-width:100%;">
+                    <img src="nido 1 beige.webp" alt="Imagen Nido 1 Beige" style="max-width:100%;">
+                    <div class="btn-trigger">Ver Detalles</div>
+                </div>
+                <div class="card-back">
+                    <div class="back-text">
+                        <ul>
+                            <li>Realizado en tela 100% tusor de algodón, reversible, mide 75 x 50 cm, con un colchón firme de goma espuma y relleno de vellón. Perfecto para llevarlo a cualquier lugar y darles un descanso tranquilo y protegido.</li>
+                            <li>Talles: RN a 6 meses</li>
+                            <li>Costuras invisibles</li>
+                        </ul>
+                        <button class="btn-wpp"><a href="http://wa.me/541166653606" target="_blank">Comprar por WhatsApp</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nido 2 -->
+        <div class="card-box">
+            <div class="card-inner">
+                <div class="card-front">
+                    <h3>Nido de contención "Baby Pedacito"</h3>
+                    <img src="nido 4 dibujos blanco.webp" alt="Nido Dibujos Blanco" style="max-width:100%;">
+                    <img src="nido 6 corazon.webp" alt="Imagen Nido Corazón" style="max-width:100%;">
+                    <div class="btn-trigger">Ver Detalles</div>
+                </div>
+                <div class="card-back">
+                    <div class="back-text">
+                        <ul>
+                            <li>Realizado en tela 100% telas de algodón</li>
+                            <li>Reversible</li>
+                            <li>Mide 75 x 50 cm</li>
+                            <li>Colchón firme de goma espuma y relleno de vellón</li>
+                            <li>Perfecto para llevarlo a cualquier lugar, darles un descanso tranquilo y protegido.</li>
+                            <li>Talles: RN a 6 meses.</li>
+                            <li>Costuras invisibles.</li>
+                        </ul>
+                        <button class="btn-wpp"><a href="http://wa.me/541166653606" target="_blank">Comprar por WhatsApp</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Hero Principal -->
     <header id="inicio" class="hero">
         <video autoplay muted loop playsinline class="hero-video">
             <source src="https://assets.mixkit.co/videos/preview/mixkit-mother-cleaning-her-baby-with-a-towel-after-a-bath-4441-large.mp4" type="video/mp4">
         </video>
         <div class="hero-content">
             <h1>Amor en cada detalle</h1>
-            <p>Ropa y accesorios premium para los tesoros más grandes de la vida.</p>
+            <p>Accesorios premium para los tesoros más grandes de la vida.</p>
             <a href="#coleccion" class="btn-main">Explorar Tienda</a>
         </div>
     </header>
 
+    <!-- Sección Colección / Productos -->
     <section id="coleccion" class="container">
-        <h2 class="title">Nuestra Selección Especial</h2>
+        <h2 class="title">LETRAS DE BIENVENIDA</h2>
+        
         <div class="product-grid">
             
+            <!-- Pack Regalo / Neceser -->
             <div class="card-box">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="https://images.unsplash.com/photo-1515488764276-beab7607c1e6?auto=format&fit=crop&q=80&w=600" alt="Ajuar Bebé">
-                        <h3>Ajuar de Algodón</h3>
+                        <img src="letras peluche 1.webp" alt="Letras Bebé" style="max-width:100%;">
+                        <img src="letras peluche 2.webp" alt="Letras Peluche 2" style="max-width:100%;">    
+                        <h3>PACK REGALITO</h3>
+                        <img src="babero 1.webp" alt="Babero 1" style="max-width:100%;">
+                        <img src="babero 2.webp" alt="Babero 2" style="max-width:100%;">
+                        <img src="babero 3.webp" alt="Babero 3" style="max-width:100%;">
+                        <p>Con estos complementos podés hacer un útil presente a esa futura mamá. 
+                        <p>Trae bandana, babita y porta chupete.</p>    
+                        
                         <div class="btn-trigger">Ver Detalles</div>
+                        <button class="btn-wpp"><a href="http://wa.me/541166653606" target="_blank">Comprar por WhatsApp</a></button>
                     </div>
-                    <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1515488764276-beab7607c1e6?auto=format&fit=crop&q=80&w=600');">
+                    <div class="card-back">
                         <div class="back-text">
-                            <h3>Ajuar Premium</h3>
+                            <h3>Neceser Para Bolso</h3>
+                            <h4>Personalizá Tu Momento Mágico Con Nuestros Productos</h4>
+                            <img src="neceser cuadrado 1.webp" alt="Neceser 1" style="max-width:100%;">
+                            <img src="neceser cuadrado 2.webp" alt="Neceser 2" style="max-width:100%;">
+                            <img src="neceser cuadrado 3.webp" alt="Neceser 3" style="max-width:100%;">
+                            <img src="neceser cuadrado 4.webp" alt="Neceser 4" style="max-width:100%;">
                             <ul>
-                                <li>Algodón Pima 100%</li>
-                                <li>Talles: RN a 6 meses</li>
-                                <li>Costuras invisibles</li>
+                                <li>Realizado en gabardina.
+                                <li>Con su interior impermeable.
+                                <li>Un complemento que no te puede faltar.
                             </ul>
-                            <p class="price">$5.800</p>
+                            
+                            <div class="btn-trigger">Ver Detalles</div>
+                            <button class="btn-wpp"><a href="http://wa.me/541166653606" target="_blank">Comprar por WhatsApp</a></button>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <!-- Cubrehuevito y Combo Pack -->
             <div class="card-box">
                 <div class="card-inner">
                     <div class="card-front">
-                        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=600" alt="Manta">
-                        <h3>Mantas de Apego</h3>
+                        <h3>SET CAMBIADOR</h3>
+                        <img src="set cambiador.webp" alt="Set Cambiador" style="max-width:100%;">
                         <div class="btn-trigger">Ver Detalles</div>
+                        <button class="btn-wpp"><a href="http://wa.me/541166653606" target="_blank">Comprar por WhatsApp</a></button>
                     </div>
-                    <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=600');">
+                    <div class="card-back">
                         <div class="back-text">
-                            <h3>Mantas Soft</h3>
+                            <h3>Cubrehuevito Butaca Auto</h3>
+                            <img src="cubrehuebito 1.webp" alt="Cubrehuevito 1" style="max-width:100%;">
+                            <img src="cubrehuebito 2.webp" alt="Cubrehuevito 2" style="max-width:100%;">
+                            <img src="cubrehuebito 3.webp" alt="Cubrehuevito 3" style="max-width:100%;">
                             <ul>
-                                <li>Lana hipoalergénica</li>
-                                <li>Textura extra suave</li>
-                                <li>Varios colores</li>
+                                <li>Con Reductor</li>
+                                <li>Adaptable a todos los modelos</li>
+                                <li>Realizado en tela de algodón Tusor</li>
+                                <li>Reversible y de Fácil Lavado</li>
                             </ul>
-                            <p class="price">$3.500</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-box">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?auto=format&fit=crop&q=80&w=600" alt="Set Juego">
-                        <h3>Set de Regalo</h3>
-                        <div class="btn-trigger">Ver Detalles</div>
-                    </div>
-                    <div class="card-back" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?auto=format&fit=crop&q=80&w=600');">
-                        <div class="back-text">
-                            <h3>Pack Bienvenida</h3>
+                            
+                            <h3>Combo Pack</h3>
                             <ul>
-                                <li>Caja decorativa</li>
-                                <li>Sonajero artesanal</li>
-                                <li>Zapatitos de tela</li>
+                                <li>Rígido, Antivuelco, Alta densidad (Placa)</li>
+                                <li>Medidas 45cm X 65cm, fuelles laterales 8cm</li>
+                                <li>Recubierto de tela impermeable y desmontable</li>
+                                <li>Cesto Organizador XXL 30cm X 15cm (Práctico y eficiente)</li>
                             </ul>
-                            <p class="price">$7.200</p>
+                            <p class="price">$Consultar</p>
+                            <button class="btn-wpp"><a href="http://wa.me/541166653606" target="_blank">Comprar por WhatsApp</a></button>
                         </div>
                     </div>
                 </div>
@@ -99,14 +203,15 @@
         </div>
     </section>
 
-    <a href="https://wa.me/542234476823" class="wpp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <!-- Botón flotante WhatsApp -->
+    <a href="https://wa.me/541166653606" class="wpp-float" target="_blank" style="position:fixed; bottom:20px; right:20px; z-index:1000;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:60px; height:60px;">
     </a>
 
     <footer>
         <p class="frase-personal">"Emprender es cuidar cada detalle como si fuera para mi propio hijo. Gracias por confiar en este Pedacito de Cielo."</p>
         <div class="sep"></div>
-        <p>&copy; 2026 PEDACITO-DE-CIELO | Todos los derechos reservados.</p>
+        <p>&copy; 2026 PEDACITO DE CIELO | Todos los derechos reservados.</p>
     </footer>
 
 </body>
